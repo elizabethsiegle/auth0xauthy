@@ -1,0 +1,38 @@
+{
+  "name": "auth0-authy-sample-app",
+  "version": "1.0.0",
+  "description": "This is the sample app for setting up Authy TOTP 2FA with Auth0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www",
+    "dev": "nodemon bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/auth0-authy-sample-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auth0/auth0-authy-sample-app/issues"
+  },
+  "homepage": "https://github.com/auth0/auth0-authy-sample-app#readme",
+  "dependencies": {
+    "auth0": "^2.3.0",
+    "authy": "^1.2.0",
+    "body-parser": "^1.15.1",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "express-session": "^1.13.0",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-auth0": "^0.5.1",
+    "pug": "^2.0.0-alpha6",
+    "serve-favicon": "^2.3.0"
+  }
+}

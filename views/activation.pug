@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  link(rel="stylesheet" href="https://www.authy.com/form.authy.min.css")
+
+  p Hello, #{user.displayName}! Before we get started, we need your cell phone number so we can get your started with our Authy Two-Factor Authentication service. #{user._json.email}
+
+  if authy_error
+    p #{authy_error}
+
+  div.login-form
+    form(method="POST")
+      if user._json.email
+        p Email: #{user._json.email}
+        input(type="hidden" name="email" value=user._json.email)
+      else
+        label(for="email") Your Email Address:
+        input(type="text" name="email" placeholder="my@email.com")
+        br
+      label(for="country_code" data-show-as="number" data-value="+1") Country Code:
+      select#authy-countries(name="country_code")
+      br
+      label(for="cell_number") Cell Phone Number:
+      input#authy-cellphone(type="text" name="cell_number" value="")
+      br
+      button(type="submit") Activate this Number
+
+  script(src="https://www.authy.com/form.authy.min.js")

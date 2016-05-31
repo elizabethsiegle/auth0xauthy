@@ -1,0 +1,3 @@
+#! /bin/bash
+
+wt create --name authy-mfa --secret authy_api_key=AUTHY_API_KEY --secret authy_sid=TWILIO_SID --secret auth0_secret=AUTH0_CLIENT_SECRET --secret auth0_clientID=AUTH0_CLIENTID --secret returnUrl=https://AUTH0_DOMAIN/continue --output json --profile WEBTASK_PROFILE authy-mfa-wt.js
