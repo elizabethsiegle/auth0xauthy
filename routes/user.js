@@ -25,21 +25,19 @@ router.get('/activate', ensureLoggedIn, function(req, res, next){
 
 router.post('/activate', ensureLoggedIn, function(req, res, next){
   authy.register_user(req.body.email, req.body.cell_number, req.body.country_code, function(err, result){
-    console.log(err, result)
     if(err){
-      authy_error = 'Something went wrong activating your Authy account: ' + err;
+      console.log('Something went wrong activating your Authy account: ' + err);
       res.redirect('/user/activate')
     } else {
       authy_error = ''
-      management.updateUserMetadata(req.user, { authyID: result.user.id, cellNumber: req.body.cell_number, countryCode: req.body.country_code },
+      management.updateAppMetadata(req.user, { authyID: result.user.id, cellNumber: req.body.cell_number, countryCode: req.body.country_code },
         function(err, user){
           if(err){
-            authy_error = 'Something went wrong updating your Auth0 user metadata: ' + err
+            console.log(authy_error = 'Something went wrong updating your Auth0 user metadata: ' + err)
             res.redirect('/user/activate')
           } else {
             //Also: figure out how to ask for the token with login (customize lock?)
-            req.user.logout()
-            res.redirect('/login')
+            res.redirect('https://kperch.auth0.com/v2/logout')
           }
         })
     }

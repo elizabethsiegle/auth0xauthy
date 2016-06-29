@@ -15,6 +15,7 @@ var routes = require('./routes/index');
 var user = require('./routes/user');
 
 // This will configure Passport to use Auth0
+console.log('vars', process.env)
 var strategy = new Auth0Strategy({
     domain:       process.env.AUTH0_DOMAIN,
     clientID:     process.env.AUTH0_CLIENT_ID,

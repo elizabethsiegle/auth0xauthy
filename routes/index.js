@@ -30,7 +30,7 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/login/error' }),
   function(req, res) {
-    if(!req.user._json.user_metadata || req.user._json.user_metadata.needsAuthyActivation){
+    if(!req.user._json.app_metadata || req.user._json.app_metadata.needsAuthyActivation){
       res.redirect('/user/activate')
     } else {
       res.redirect(req.session.returnTo || '/user');

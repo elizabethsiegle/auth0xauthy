@@ -3,7 +3,7 @@ extends layout
 block content
   link(rel="stylesheet" href="https://www.authy.com/form.authy.min.css")
 
-  p Hello, #{user.displayName}! Before we get started, we need your cell phone number so we can get your started with our Authy Two-Factor Authentication service. #{user._json.email}
+  p Hello, #{user.displayName}! Before we get started, we need your cell phone number so we can get your started with our Authy Two-Factor Authentication service.
 
   if authy_error
     p #{authy_error}
