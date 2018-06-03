@@ -1,8 +1,8 @@
 function (user, context, callback) {
   var configuration = {
-    CLIENT_ID: 'AUTH0_CLIENT_ID',
-    CLIENT_SECRET: 'AUTH0_CLIENT_SECRET',
-    ISSUER: 'AUTH0_DOMAIN'
+    CLIENT_ID: 'Ktx00320wubgSsDzZDVvt0LR0YuhBzqR',
+    CLIENT_SECRET: 'gN9kcdhNDvd_VRTpVivqrdiVkO8bHQYk0X2i7j3Q09pv0L9TPu1Pft3oes7LgVXy',
+    ISSUER: 'lizziepika.auth0.com'
   };
   
   //check that user has activated authy

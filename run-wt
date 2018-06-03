@@ -1,3 +1,3 @@
 #! /bin/bash
 
-wt create --name authy-mfa --secret authy_api_key=YOUR_AUTHY_API_KEY --secret auth0_secret=YOUR_AUTH0_CLIENT_SECRET --secret returnUrl=https://YOUR_AUTH0_DOMAIN.auth0.com/continue --output json authy-mfa-wt.js
+wt create --name authy-mfa --secret authy_api_key=weS3ihf4JPAPufX615AOSUNcUh7cUy7d --secret auth0_secret=gN9kcdhNDvd_VRTpVivqrdiVkO8bHQYk0X2i7j3Q09pv0L9TPu1Pft3oes7LgVXy --secret auth0_clientID=Ktx00320wubgSsDzZDVvt0LR0YuhBzqR --secret returnUrl=https://wt-a60130e3f5b1dfdec0b56a2b1b30cec9-0.sandbox.auth0-extend.com/continue --output json --profile "lizziepika-default" authy-mfa-wt.js
